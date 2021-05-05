@@ -1,7 +1,7 @@
 with
 
 payments as (
-    select * from raw.stripe.payment -- {{ source('stripe','payment') }}
+    select * from {{ source('stripe','payment') }}
 )
 
 select 
